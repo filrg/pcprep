@@ -4,7 +4,7 @@ This is the pcprep project.
 
 # Building and installing
 
-See the [BUILDING](https://github.com/filrg/pcprep/BUILDING.md) document.
+See the [BUILDING](https://github.com/filrg/pcprep/blob/main/BUILDING.md) document.
 
 # Documentation
 
@@ -12,7 +12,7 @@ The The libpcprep developer documentation is available at [filrg.github.io/pcpre
 
 # Point Cloud Prepare (`pcp`)
 
-The user manual for the `pcp` application can be found in the [USAGE](https://github.com/filrg/pcprep/USAGE.md) document.
+The user manual for the `pcp` application can be found in the [USAGE](https://github.com/filrg/pcprep/blob/main/USAGE.md) document.
 
 # Compressed Point Cloud Tiles (`fil-CPCTv1`) Dataset  
 
@@ -35,5 +35,5 @@ cam2mat cam-param.json cam-matrix.json
 
 # Contributing
 
-See the [CONTRIBUTING](https://github.com/filrg/pcprep/CONTRIBUTING.md) document.
+See the [CONTRIBUTING](https://github.com/filrg/pcprep/blob/main/CONTRIBUTING.md) document.
 
