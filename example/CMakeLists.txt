@@ -1,0 +1,39 @@
+cmake_minimum_required(VERSION 3.21)
+
+project(pcprepExamples C CXX)
+
+include(../cmake/folders.cmake)
+
+if(PROJECT_IS_TOP_LEVEL)
+  find_package(pcprep REQUIRED)
+endif()
+
+add_custom_target(run-examples)
+
+function(add_c_example NAME)
+  add_executable("${NAME}" "${NAME}.c")
+  target_link_libraries("${NAME}" PRIVATE pcprep::pcprep)
+  target_compile_features("${NAME}" PRIVATE c_std_99)
+  add_custom_target("run_${NAME}" COMMAND "${NAME}" VERBATIM)
+  add_dependencies("run_${NAME}" "${NAME}")
+  add_dependencies(run-examples "run_${NAME}")
+endfunction()
+
+function(add_cpp_example NAME)
+  add_executable("${NAME}" "${NAME}.cpp")
+  target_link_libraries("${NAME}" PRIVATE pcprep::pcprep)
+  target_compile_features("${NAME}" PRIVATE cxx_std_17)
+  add_custom_target("run_${NAME}" COMMAND "${NAME}" VERBATIM)
+  add_dependencies("run_${NAME}" "${NAME}")
+  add_dependencies(run-examples "run_${NAME}")
+endfunction()
+
+if(PROJECT_IS_TOP_LEVEL)
+    find_package(glm QUIET)
+    if(glm_FOUND)
+        add_cpp_example(cam2mat)
+        target_link_libraries(cam2mat PRIVATE glm::glm)
+    endif()
+endif()
+
+add_folders(Example)
