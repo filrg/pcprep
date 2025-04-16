@@ -35,7 +35,7 @@ jobs:
 
     runs-on: ubuntu-24.04
 
-    if: github.repository_owner == 'QuangNguyenLong'
+    if: github.repository_owner == 'filrg'
 
     steps:
     - uses: actions/checkout@v4
@@ -152,7 +152,7 @@ jobs:
 
     if: github.ref == 'refs/heads/main'
       && github.event_name == 'push'
-      && github.repository_owner == 'QuangNguyenLong'
+      && github.repository_owner == 'filrg'
 
     permissions:
       contents: write
