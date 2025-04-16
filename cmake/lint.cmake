@@ -15,7 +15,7 @@ default(
     example/*.c example/*.h
     pcp/*.c pcp/*.h
 )
-default(FIX NO)
+default(FIX YES)
 
 set(flag --output-replacements-xml)
 set(args OUTPUT_VARIABLE output)

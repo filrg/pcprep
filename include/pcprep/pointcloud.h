@@ -6,8 +6,8 @@ extern "C"
 {
 #endif
 
-#include "pcprep/vec3f.h"
 #include "pcprep/pcprep_export.h"
+#include "pcprep/vec3f.h"
 #include <stdint.h>
 #include <stdlib.h>
 

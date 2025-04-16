@@ -5,8 +5,8 @@
 #include <pcprep/canvas.h>
 #include <pcprep/core.h>
 #include <pcprep/pointcloud.h>
-#include <string.h>
 #include <stdint.h>
+#include <string.h>
 
 #define MAX_PROCESS                256
 #define MAX_STATUS                 256
@@ -332,8 +332,8 @@ pcp_pixel_per_tile_s(pointcloud_t *pc, void *arg, int pc_id)
                          param->mvp_count,
                          pixel_count,
                          param->width * param->height);
-  for(int v = 0; v < param->mvp_count; v++)
-      free(pixel_count[v]);
+  for (int v = 0; v < param->mvp_count; v++)
+    free(pixel_count[v]);
   free(pixel_count);
   return 1;
 }

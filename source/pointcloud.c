@@ -1,10 +1,10 @@
-#include "pcprep/core.h"
 #include "pcprep/pointcloud.h"
+#include "pcprep/core.h"
 #include "pcprep/vec3f.h"
 #include "pcprep/vec3uc.h"
 #include "pcprep/wrapper.h"
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 #include <time.h>
 
 int pointcloud_init(pointcloud_t *pc, size_t size)

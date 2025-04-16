@@ -4,8 +4,8 @@
 extern "C"
 {
 #endif
-#include <math.h>
 #include "pcprep/core.h"
+#include <math.h>
 
   typedef struct vec3f_t
   {
