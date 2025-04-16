@@ -1,4 +1,4 @@
-# PCPREP: A point cloud preparation tool
+# A point cloud preparation tool
 
 This is the pcprep project.
 
@@ -10,13 +10,13 @@ See the [BUILDING](https://github.com/filrg/pcprep/blob/main/BUILDING.md) docume
 
 The The libpcprep developer documentation is available at [filrg.github.io/pcprep](https://filrg.github.io/pcprep) 
 
-# Point Cloud Prepare (`pcp`)
+# Point Cloud Prepare (pcp)
 
-The user manual for the `pcp` application can be found in the [USAGE](https://github.com/filrg/pcprep/blob/main/USAGE.md) document.
+The user manual for the pcp application can be found in the [USAGE](https://github.com/filrg/pcprep/blob/main/USAGE.md) document.
 
-# Compressed Point Cloud Tiles (`fil-CPCTv1`) Dataset  
+# Compressed Point Cloud Tiles (fil-CPCTv1) Dataset  
 
-The [`pcprep.sh`](pcprep.sh) script was used to generate a dataset of V-PCC-compressed point cloud tiles, derived from the [8i-VFBv2](http://plenodb.jpeg.org/pc/8ilabs) point cloud sequences. This dataset is publicly available [here](https://drive.google.com/drive/folders/1qQp4go6xP--utvJNhyrMi8RexRt6J5Dh).
+The [`pcprep.sh`](https://github.com/filrg/pcprep/blob/main/pcprep.sh) script was used to generate a dataset of V-PCC-compressed point cloud tiles, derived from the [8i-VFBv2](http://plenodb.jpeg.org/pc/8ilabs) point cloud sequences. This dataset is publicly available [here](https://drive.google.com/drive/folders/1qQp4go6xP--utvJNhyrMi8RexRt6J5Dh).
 
 # Synthetic Trajectory Generation
 
