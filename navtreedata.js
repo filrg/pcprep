@@ -25,11 +25,11 @@
 var NAVTREE =
 [
   [ "libpcprep", "index.html", [
-    [ "PCPREP: A point cloud preparation tool", "index.html", [
+    [ "A point cloud preparation tool", "index.html", [
       [ "Building and installing", "index.html#autotoc_md1", null ],
       [ "Documentation", "index.html#autotoc_md2", null ],
-      [ "Point Cloud Prepare (<tt>pcp</tt>)", "index.html#autotoc_md3", null ],
-      [ "Compressed Point Cloud Tiles (<tt>fil-CPCTv1</tt>) Dataset", "index.html#autotoc_md4", null ],
+      [ "Point Cloud Prepare (pcp)", "index.html#autotoc_md3", null ],
+      [ "Compressed Point Cloud Tiles (fil-CPCTv1) Dataset", "index.html#autotoc_md4", null ],
       [ "Synthetic Trajectory Generation", "index.html#autotoc_md5", null ],
       [ "Examples", "index.html#autotoc_md6", [
         [ "Camera to matrix", "index.html#autotoc_md7", null ]
