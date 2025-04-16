@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['aabb_2eh_1',['aabb.h',['../aabb_8h.html',1,'']]],
-  ['aabb_5ft_2',['aabb_t',['../structaabb__t.html',1,'aabb_t'],['../aabb_8h.html#a7c3b8c1eeb312d8a0abb0de703727bf4',1,'aabb_t():&#160;aabb.h']]],
-  ['aabb_5fto_5fmesh_3',['aabb_to_mesh',['../aabb_8h.html#ac57663646af0d6aac92a9361f438bba8',1,'aabb.h']]],
-  ['argp_5fprogram_5fbug_5faddress_4',['argp_program_bug_address',['../pcp_8c.html#aaa037e59f26a80a8a2e35e6f2364004d',1,'pcp.c']]],
-  ['argp_5fprogram_5fversion_5',['argp_program_version',['../pcp_8c.html#a62f73ea01c816f1996aed4c66f57c4fb',1,'pcp.c']]],
-  ['arguments_6',['arguments',['../structarguments.html',1,'']]],
-  ['arguments_5ffree_7',['arguments_free',['../pcp_8h.html#a42815cccfdff067b06a3314d6376d834',1,'pcp.h']]]
+  ['background_8',['background',['../structpcp__save__viewport__s__arg__t.html#a840ba9c7ce011cb82f3bd1534683b9d6',1,'pcp_save_viewport_s_arg_t']]],
+  ['bg_5fcol_9',['bg_col',['../structcanvas__t.html#aa38cd5dbbf439d759f8325aae377b2d1',1,'canvas_t']]],
+  ['binary_10',['binary',['../structarguments.html#ad9f19ba6bec05376831d5c6d76cba373',1,'arguments::binary()'],['../structpcp__aabb__s__arg__t.html#ab902305df8c6ac225eec8725b1ddbe02',1,'pcp_aabb_s_arg_t::binary()']]]
 ];

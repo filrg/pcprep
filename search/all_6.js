@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['get_5fcurrent_5ftime_5fms_34',['get_current_time_ms',['../core_8h.html#ab5d96afa64b5ca2dfe207a78ee35614f',1,'core.h']]],
-  ['get_5ftile_5fid_35',['get_tile_id',['../pointcloud_8h.html#a3270572d58021f0029c5722b7a22756f',1,'pointcloud.h']]]
+  ['height_36',['height',['../structcanvas__t.html#a009310c1697f32a52ac368e061de2b8d',1,'canvas_t::height()'],['../structpcp__save__viewport__s__arg__t.html#a4c41f666452248f58e7d6236103051db',1,'pcp_save_viewport_s_arg_t::height()'],['../structpcp__pixel__per__tile__s__arg__t.html#a2032570c33d0403e0debd8952b1cccb0',1,'pcp_pixel_per_tile_s_arg_t::height()'],['../structpcp__screen__area__estimation__s__arg__t.html#a0ee042dc51973140ff0790c9ead9fb3e',1,'pcp_screen_area_estimation_s_arg_t::height()']]]
 ];

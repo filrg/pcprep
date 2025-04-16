@@ -1,5 +1,25 @@
 var vec3f_8h =
 [
     [ "vec3f_t", "structvec3f__t.html", "structvec3f__t" ],
-    [ "vec3f_t", "vec3f_8h.html#a0cdcaad8fd5988d0550169c8909c11dd", null ]
+    [ "vec3f_add", "vec3f_8h.html#a1108274f759d27718535fd7a013c2ee7", null ],
+    [ "vec3f_angle_between", "vec3f_8h.html#af457ca54adb5fee11d49b9b8b60810d7", null ],
+    [ "vec3f_cross", "vec3f_8h.html#a94ed40a7eec91abbb182ce6c67795ee6", null ],
+    [ "vec3f_dot", "vec3f_8h.html#a3dab18023981507f23a50f969b13bc50", null ],
+    [ "vec3f_eq", "vec3f_8h.html#a24b6fc677733b3fed2ef9907fd70e46d", null ],
+    [ "vec3f_g", "vec3f_8h.html#a7facefbd4d749d85886e4e64c09c1daf", null ],
+    [ "vec3f_geq", "vec3f_8h.html#a796cb86c3e201bad59a76ed271ec6579", null ],
+    [ "vec3f_int", "vec3f_8h.html#a49ef60af4250cfc69788425667f25d2f", null ],
+    [ "vec3f_inverse", "vec3f_8h.html#a496330a6088a205591aa1f61c4df746c", null ],
+    [ "vec3f_l", "vec3f_8h.html#a123d567ac561098db6ce1fff9e8ff049", null ],
+    [ "vec3f_leq", "vec3f_8h.html#add65b5392dac7bb2c1a6c7c05eba6e39", null ],
+    [ "vec3f_magnitude", "vec3f_8h.html#a2eb1ca7fd65025e026f58dcc52f20a25", null ],
+    [ "vec3f_mul", "vec3f_8h.html#a8a5801e8837b750d171b88a22a0b21b3", null ],
+    [ "vec3f_mul_scalar", "vec3f_8h.html#ac695d495488c6ea96cf16574a55d547d", null ],
+    [ "vec3f_mvp_mul", "vec3f_8h.html#a5add9d5a119c1537418cdea3f33d5c1a", null ],
+    [ "vec3f_normalize", "vec3f_8h.html#a6156716a8e591e6c07b7da48c34f9e0b", null ],
+    [ "vec3f_quantize", "vec3f_8h.html#aa9f42402c0d99c12fdd28bbd32479640", null ],
+    [ "vec3f_reflect", "vec3f_8h.html#a589283ab18318fbf5e1ac2f88dc87452", null ],
+    [ "vec3f_rotate", "vec3f_8h.html#ad00971f72bfa05fa753c100df446d214", null ],
+    [ "vec3f_set", "vec3f_8h.html#a99c054f0b49b0fbd26067d3ee5471ee3", null ],
+    [ "vec3f_sub", "vec3f_8h.html#a18d300de49291f01079d9d257796c0c4", null ]
 ];

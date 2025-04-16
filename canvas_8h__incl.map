@@ -1,5 +1,5 @@
-<map id="include/pcprep/canvas.h" name="include/pcprep/canvas.h">
-<area shape="rect" id="node1" title=" " alt="" coords="133,5,311,32"/>
+<map id="canvas.h" name="canvas.h">
+<area shape="rect" id="node1" title=" " alt="" coords="182,5,262,32"/>
 <area shape="rect" id="node2" href="$core_8h.html" title=" " alt="" coords="167,155,277,181"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,229,180,256"/>
 <area shape="rect" id="node6" href="$vec3uc_8h.html" title=" " alt="" coords="265,80,393,107"/>

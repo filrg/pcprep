@@ -1,9 +1,10 @@
 var pointcloud_8h =
 [
     [ "pointcloud_t", "structpointcloud__t.html", "structpointcloud__t" ],
-    [ "pointcloud_t", "pointcloud_8h.html#a6f375fcbebbb2e82afc3f3246a236184", null ],
     [ "get_tile_id", "pointcloud_8h.html#a3270572d58021f0029c5722b7a22756f", null ],
     [ "pointcloud_count_pixel_per_tile", "pointcloud_8h.html#a2ddea5c5d6e12cc1f7145a07f96654f8", null ],
+    [ "pointcloud_element_merge", "pointcloud_8h.html#ac2f16390c92be4ae1c3a943734045e4f", null ],
+    [ "pointcloud_element_merge_sort", "pointcloud_8h.html#aeda76d2a9e6e7dfbe601dfad0a98b55a", null ],
     [ "pointcloud_free", "pointcloud_8h.html#aa5b72f37af95d83b2081c4710ba16c14", null ],
     [ "pointcloud_init", "pointcloud_8h.html#a92788e1ee35944bc697ea96837b839c2", null ],
     [ "pointcloud_load", "pointcloud_8h.html#a927661158e694af748d54b8613b3ca01", null ],

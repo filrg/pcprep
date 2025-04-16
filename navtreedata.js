@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "libpcprep", "index.html", [
-    [ "<a href=\"https://github.com/filrg/pcprep\">Point cloud preparation tool</a>", "index.html", [
+    [ "PCPREP: A point cloud preparation tool", "index.html", [
       [ "Building and installing", "index.html#autotoc_md1", null ],
       [ "Documentation", "index.html#autotoc_md2", null ],
       [ "Point Cloud Prepare (<tt>pcp</tt>)", "index.html#autotoc_md3", null ],
@@ -59,7 +59,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"aabb_8h.html"
+"aabb_8h.html",
+"vec3u_8h.html#a463ffa7467b082157301455b4ab9195b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

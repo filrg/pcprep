@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_3ca_20href_3d_22https_3a_2f_2fgithub_2ecom_2ffilrg_2fpcprep_22_3epoint_20cloud_20preparation_20tool_3c_2fa_3e_344',['&lt;a href=&quot;https://github.com/filrg/pcprep&quot;&gt;Point cloud preparation tool&lt;/a&gt;',['../index.html',1,'']]]
+  ['pcprep_3a_20a_20point_20cloud_20preparation_20tool_465',['PCPREP: A point cloud preparation tool',['../index.html',1,'']]]
 ];

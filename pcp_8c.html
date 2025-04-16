@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libpcprep: pcp/pcp.c File Reference</title>
+<title>libpcprep: pcp.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,12 +99,14 @@ $(document).ready(function(){initNavTree('pcp_8c.html',''); initResizable(); });
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for pcp.c:</div>
-<div class="dyncontent">
-<div class="center"><img src="pcp_8c__incl.png" border="0" usemap="#apcp_2pcp_8c" alt=""/></div>
-<map name="apcp_2pcp_8c" id="apcp_2pcp_8c">
-<area shape="rect" title=" " alt="" coords="870,5,953,32"/>
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for pcp.c:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="pcp_8c__incl.png" border="0" usemap="#apcp_8c" alt=""/></div>
+<map name="apcp_8c" id="apcp_8c">
+<area shape="rect" title=" " alt="" coords="883,5,939,32"/>
 <area shape="rect" href="pcp_8h.html" title=" " alt="" coords="536,80,593,107"/>
 <area shape="rect" title=" " alt="" coords="617,304,688,331"/>
 <area shape="rect" title=" " alt="" coords="796,379,867,405"/>
@@ -132,6 +134,10 @@ Functions</h2></td></tr>
 <tr class="separator:af7f03834f989243d71357991463b4ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159dff40fbed31c69e545557e49c78e0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a159dff40fbed31c69e545557e49c78e0">safe_dup</a> (const char *src)</td></tr>
 <tr class="separator:a159dff40fbed31c69e545557e49c78e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeab5fc0ac2cd9471db4d31eebcfbe56"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#adeab5fc0ac2cd9471db4d31eebcfbe56">parse_func_opt</a> (char *arg, struct <a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a> *<a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a>, struct argp_state *state, <a class="el" href="structfunc__t.html">func_t</a> *funcs, size_t size, int max_size, const <a class="el" href="structfunc__info__t.html">func_info_t</a> *func_info_list, const char *name)</td></tr>
+<tr class="separator:adeab5fc0ac2cd9471db4d31eebcfbe56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ee63236273ebb9325c444cacf00159"><td class="memItemLeft" align="right" valign="top">static error_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a35ee63236273ebb9325c444cacf00159">parse_opt</a> (int key, char *arg, struct argp_state *state)</td></tr>
+<tr class="separator:a35ee63236273ebb9325c444cacf00159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -141,6 +147,24 @@ Variables</h2></td></tr>
 <tr class="separator:a62f73ea01c816f1996aed4c66f57c4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa037e59f26a80a8a2e35e6f2364004d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#aaa037e59f26a80a8a2e35e6f2364004d">argp_program_bug_address</a> = &quot;quang.nglong@gmail.com&quot;</td></tr>
 <tr class="separator:aaa037e59f26a80a8a2e35e6f2364004d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6164deb8a824f8cb2b9147cfc3174f5"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#af6164deb8a824f8cb2b9147cfc3174f5">doc</a> [] = &quot;A program that prepare point cloud.&quot;</td></tr>
+<tr class="separator:af6164deb8a824f8cb2b9147cfc3174f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1fd3a47aea6a8944038c9100eb9135"><td class="memItemLeft" align="right" valign="top">static struct argp_option&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#abc1fd3a47aea6a8944038c9100eb9135">options</a> []</td></tr>
+<tr class="separator:abc1fd3a47aea6a8944038c9100eb9135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98606e5521ec61544a4870cd7d8904c8"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a98606e5521ec61544a4870cd7d8904c8">process_doc</a> []</td></tr>
+<tr class="separator:a98606e5521ec61544a4870cd7d8904c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0691c9bd794a8e0f364bf1e9eaff2dbd"><td class="memItemLeft" align="right" valign="top">static struct argp_option&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a0691c9bd794a8e0f364bf1e9eaff2dbd">process_options</a> []</td></tr>
+<tr class="separator:a0691c9bd794a8e0f364bf1e9eaff2dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7433dd02f2b7de4f4dd7b1e491eb4441"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a7433dd02f2b7de4f4dd7b1e491eb4441">status_doc</a> []</td></tr>
+<tr class="separator:a7433dd02f2b7de4f4dd7b1e491eb4441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ad54d4a3427c4aeb43b9327a0c9445"><td class="memItemLeft" align="right" valign="top">static struct argp_option&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a12ad54d4a3427c4aeb43b9327a0c9445">status_options</a> []</td></tr>
+<tr class="separator:a12ad54d4a3427c4aeb43b9327a0c9445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735e6ad860dd8ee79ef6fb64fcfab76a"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a735e6ad860dd8ee79ef6fb64fcfab76a">process_argp</a></td></tr>
+<tr class="separator:a735e6ad860dd8ee79ef6fb64fcfab76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145b8d647e536dcf2644576ba6ea400d"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#a145b8d647e536dcf2644576ba6ea400d">status_argp</a></td></tr>
+<tr class="separator:a145b8d647e536dcf2644576ba6ea400d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70c96531b1b652d70c221cfaf3207f3"><td class="memItemLeft" align="right" valign="top">static struct argp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a> = {<a class="el" href="pcp_8c.html#abc1fd3a47aea6a8944038c9100eb9135">options</a>, <a class="el" href="pcp_8c.html#a35ee63236273ebb9325c444cacf00159">parse_opt</a>, 0, <a class="el" href="pcp_8c.html#af6164deb8a824f8cb2b9147cfc3174f5">doc</a>}</td></tr>
+<tr class="separator:ab70c96531b1b652d70c221cfaf3207f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
@@ -167,6 +191,120 @@ Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeab5fc0ac2cd9471db4d31eebcfbe56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeab5fc0ac2cd9471db4d31eebcfbe56">&#9670;&nbsp;</a></span>parse_func_opt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int parse_func_opt </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a> *&#160;</td>
+          <td class="paramname"><em>argp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct argp_state *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfunc__t.html">func_t</a> *&#160;</td>
+          <td class="paramname"><em>funcs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfunc__info__t.html">func_info_t</a> *&#160;</td>
+          <td class="paramname"><em>func_info_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35ee63236273ebb9325c444cacf00159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ee63236273ebb9325c444cacf00159">&#9670;&nbsp;</a></span>parse_opt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static error_t parse_opt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct argp_state *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -208,6 +346,28 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ab70c96531b1b652d70c221cfaf3207f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70c96531b1b652d70c221cfaf3207f3">&#9670;&nbsp;</a></span>argp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct argp argp = {<a class="el" href="pcp_8c.html#abc1fd3a47aea6a8944038c9100eb9135">options</a>, <a class="el" href="pcp_8c.html#a35ee63236273ebb9325c444cacf00159">parse_opt</a>, 0, <a class="el" href="pcp_8c.html#af6164deb8a824f8cb2b9147cfc3174f5">doc</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aaa037e59f26a80a8a2e35e6f2364004d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa037e59f26a80a8a2e35e6f2364004d">&#9670;&nbsp;</a></span>argp_program_bug_address</h2>
 
@@ -234,6 +394,219 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="af6164deb8a824f8cb2b9147cfc3174f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6164deb8a824f8cb2b9147cfc3174f5">&#9670;&nbsp;</a></span>doc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char doc[] = &quot;A program that prepare point cloud.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc1fd3a47aea6a8944038c9100eb9135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1fd3a47aea6a8944038c9100eb9135">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct argp_option options[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a735e6ad860dd8ee79ef6fb64fcfab76a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735e6ad860dd8ee79ef6fb64fcfab76a">&#9670;&nbsp;</a></span>process_argp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a> process_argp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code" href="pcp_8c.html#a0691c9bd794a8e0f364bf1e9eaff2dbd">process_options</a>, NULL, <span class="stringliteral">&quot;[&lt;ARG&gt;...]&quot;</span>, <a class="code" href="pcp_8c.html#a98606e5521ec61544a4870cd7d8904c8">process_doc</a>}</div>
+<div class="ttc" id="apcp_8c_html_a0691c9bd794a8e0f364bf1e9eaff2dbd"><div class="ttname"><a href="pcp_8c.html#a0691c9bd794a8e0f364bf1e9eaff2dbd">process_options</a></div><div class="ttdeci">static struct argp_option process_options[]</div><div class="ttdef"><b>Definition:</b> pcp.c:355</div></div>
+<div class="ttc" id="apcp_8c_html_a98606e5521ec61544a4870cd7d8904c8"><div class="ttname"><a href="pcp_8c.html#a98606e5521ec61544a4870cd7d8904c8">process_doc</a></div><div class="ttdeci">static char process_doc[]</div><div class="ttdef"><b>Definition:</b> pcp.c:353</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a98606e5521ec61544a4870cd7d8904c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98606e5521ec61544a4870cd7d8904c8">&#9670;&nbsp;</a></span>process_doc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char process_doc[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="stringliteral">&quot;Defines a specific process to be applied to the point cloud.&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0691c9bd794a8e0f364bf1e9eaff2dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0691c9bd794a8e0f364bf1e9eaff2dbd">&#9670;&nbsp;</a></span>process_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct argp_option process_options[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;help&quot;</span>, 0, NULL, OPTION_DOC, <span class="stringliteral">&quot;Give this help list&quot;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;sample&quot;</span>, 0, NULL, OPTION_DOC, <span class="stringliteral">&quot;&lt;ratio=FLOAT&gt; &lt;binary=0|1&gt;&quot;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;voxel&quot;</span>, 0, NULL, OPTION_DOC, <span class="stringliteral">&quot;&lt;voxel-size=FLOAT&gt;&quot;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;remove-duplicates&quot;</span>, 0, NULL, OPTION_DOC, <span class="stringliteral">&quot;No arguments&quot;</span>},</div>
+<div class="line">    {0}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a145b8d647e536dcf2644576ba6ea400d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a145b8d647e536dcf2644576ba6ea400d">&#9670;&nbsp;</a></span>status_argp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a> status_argp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code" href="pcp_8c.html#a12ad54d4a3427c4aeb43b9327a0c9445">status_options</a>, NULL, <span class="stringliteral">&quot;[&lt;ARG&gt;...]&quot;</span>, <a class="code" href="pcp_8c.html#a7433dd02f2b7de4f4dd7b1e491eb4441">status_doc</a>}</div>
+<div class="ttc" id="apcp_8c_html_a12ad54d4a3427c4aeb43b9327a0c9445"><div class="ttname"><a href="pcp_8c.html#a12ad54d4a3427c4aeb43b9327a0c9445">status_options</a></div><div class="ttdeci">static struct argp_option status_options[]</div><div class="ttdef"><b>Definition:</b> pcp.c:365</div></div>
+<div class="ttc" id="apcp_8c_html_a7433dd02f2b7de4f4dd7b1e491eb4441"><div class="ttname"><a href="pcp_8c.html#a7433dd02f2b7de4f4dd7b1e491eb4441">status_doc</a></div><div class="ttdeci">static char status_doc[]</div><div class="ttdef"><b>Definition:</b> pcp.c:363</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7433dd02f2b7de4f4dd7b1e491eb4441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7433dd02f2b7de4f4dd7b1e491eb4441">&#9670;&nbsp;</a></span>status_doc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char status_doc[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="stringliteral">&quot;Defines a specific status operation to &quot;</span></div>
+<div class="line">                           <span class="stringliteral">&quot;be applied to the point cloud.&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a12ad54d4a3427c4aeb43b9327a0c9445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ad54d4a3427c4aeb43b9327a0c9445">&#9670;&nbsp;</a></span>status_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct argp_option status_options[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;help&quot;</span>, 0, NULL, OPTION_DOC, <span class="stringliteral">&quot;Give this help list&quot;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;aabb&quot;</span>,</div>
+<div class="line">     0, NULL,</div>
+<div class="line">     OPTION_DOC, <span class="stringliteral">&quot;&lt;output=0|1|2&gt; &lt;binary=0|1&gt; &lt;output-path=FILE&gt;&quot;</span>},</div>
+<div class="line"> </div>
+<div class="line">    {<span class="stringliteral">&quot;save-viewport&quot;</span>,</div>
+<div class="line">     0, NULL,</div>
+<div class="line">     OPTION_DOC, <span class="stringliteral">&quot;&lt;camera=JSON&gt; &lt;background-color=R,G,B&gt; &lt;output-png(s)=FILE&gt;&quot;</span>},</div>
+<div class="line"> </div>
+<div class="line">    {<span class="stringliteral">&quot;pixel-per-tile&quot;</span>,</div>
+<div class="line">     0, NULL,</div>
+<div class="line">     OPTION_DOC, <span class="stringliteral">&quot;&lt;camera=JSON&gt; &lt;nx,ny,nz&gt; &lt;output-visibility=JSON&gt;&quot;</span>},</div>
+<div class="line">    {<span class="stringliteral">&quot;screen-area-estimation&quot;</span>,</div>
+<div class="line">     0, NULL,</div>
+<div class="line">     OPTION_DOC, <span class="stringliteral">&quot;&lt;camera=JSON&gt; &lt;output-estimation=JSON&gt;&quot;</span>},</div>
+<div class="line">    {0}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -1,5 +1,5 @@
-<map id="include/pcprep/pointcloud.h" name="include/pcprep/pointcloud.h">
-<area shape="rect" id="node1" title=" " alt="" coords="197,5,398,32"/>
+<map id="pointcloud.h" name="pointcloud.h">
+<area shape="rect" id="node1" title=" " alt="" coords="246,5,349,32"/>
 <area shape="rect" id="node2" href="$vec3f_8h.html" title=" " alt="" coords="117,80,235,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="89,229,263,256"/>
 <area shape="rect" id="node7" title=" " alt="" coords="287,229,358,256"/>

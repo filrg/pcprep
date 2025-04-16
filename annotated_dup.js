@@ -3,7 +3,7 @@ var annotated_dup =
     [ "aabb_t", "structaabb__t.html", "structaabb__t" ],
     [ "arguments", "structarguments.html", "structarguments" ],
     [ "canvas_t", "structcanvas__t.html", "structcanvas__t" ],
-    [ "func_info", "structfunc__info.html", "structfunc__info" ],
+    [ "func_info_t", "structfunc__info__t.html", "structfunc__info__t" ],
     [ "func_t", "structfunc__t.html", "structfunc__t" ],
     [ "mesh_t", "structmesh__t.html", "structmesh__t" ],
     [ "pcp_aabb_s_arg_t", "structpcp__aabb__s__arg__t.html", "structpcp__aabb__s__arg__t" ],

@@ -1,7 +1,7 @@
 var pcp_8h =
 [
     [ "func_t", "structfunc__t.html", "structfunc__t" ],
-    [ "func_info", "structfunc__info.html", "structfunc__info" ],
+    [ "func_info_t", "structfunc__info__t.html", "structfunc__info__t" ],
     [ "arguments", "structarguments.html", "structarguments" ],
     [ "pcp_sample_p_arg_t", "structpcp__sample__p__arg__t.html", "structpcp__sample__p__arg__t" ],
     [ "pcp_aabb_s_arg_t", "structpcp__aabb__s__arg__t.html", "structpcp__aabb__s__arg__t" ],
@@ -29,13 +29,6 @@ var pcp_8h =
     [ "SET_OPT_STATUS", "pcp_8h.html#a1487eb969c41e0557ca85d35b2c75721", null ],
     [ "SIZE_PATH", "pcp_8h.html#af6d232c4bf617fabb30dda3a7b3d0149", null ],
     [ "func_f", "pcp_8h.html#adac0de73cc182c1789d64bc4a343d6a4", null ],
-    [ "func_info_t", "pcp_8h.html#afb6598ce3c73328e2040a58e49026dd7", null ],
-    [ "func_t", "pcp_8h.html#a910ba69123f21ec3107970a91c0b1bdb", null ],
-    [ "pcp_aabb_s_arg_t", "pcp_8h.html#a281060c01c38d96ee40be291ee0e4e89", null ],
-    [ "pcp_pixel_per_tile_s_arg_t", "pcp_8h.html#aa20362b40805db389815c450be44d113", null ],
-    [ "pcp_sample_p_arg_t", "pcp_8h.html#a43448550fb7b378d96effe33ee09b998", null ],
-    [ "pcp_save_viewport_s_arg_t", "pcp_8h.html#ab24a330e8e662c1ae275ad204266dcd3", null ],
-    [ "pcp_screen_area_estimation_s_arg_t", "pcp_8h.html#ad26eb7d8176ec7f145e1026ea045561e", null ],
     [ "arguments_free", "pcp_8h.html#a42815cccfdff067b06a3314d6376d834", null ],
     [ "find_func", "pcp_8h.html#a6e2fcd06c320a26003a72a05ac8a0d55", null ],
     [ "pcp_aabb_s", "pcp_8h.html#ac47d9a73ee639097cc5484c8b03d608e", null ],
