@@ -178,7 +178,7 @@ Set the post-process action of the program (ACTION can be either TILE, MERGE, or
   Example: `bbox%04d.ply` is the output path for multiple output files. 
 
 #### Pixel per Tile
-##### `save-viewport <camera=JSON> <nx,ny,nz> <output-visibility=JSON>`
+##### `pixel-per-tile <camera=JSON> <nx,ny,nz> <output-visibility=JSON>`
   Calculate the number of pixels each point cloud tile occupies in the camera viewport when view the processing point cloud from a given camera trajectory.
 - `camera=JSON`
   Specifies the JSON file path of the camera trajectory in MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
