@@ -98,7 +98,7 @@ The `pcp` program processes point cloud (tiles) data from a source file and gene
 ### Set pre-process action Option 
 #### `--pre-process=ACTION`
 
-Set the pre-process action of the program (ACTION can be either TILE, MERGE, or NONE, default is NONE). If the input are file path to point cloud tiles, ACTION can only be MERGE or NONE.
+Set the pre-process action of the program (ACTION can be either TILE, MERGE, or NONE, default is NONE). If the input is a path to point cloud tiles, ACTION can only be MERGE or NONE.
   - `TILE`: Tile the point cloud into multiple tiles before performing any process/status. 
   - `MERGE`: Merge the point cloud tiles into one point cloud before performing any process/status. 
   - `NONE`: Do nothing to the point cloud (tiles) before performing any process/status.
@@ -106,19 +106,19 @@ Set the pre-process action of the program (ACTION can be either TILE, MERGE, or 
 ### Set post-process action Option 
 #### `--post-process=ACTION`
 Set the post-process action of the program (ACTION can be either TILE, MERGE, or NONE, default is NONE). Post-process ACTION must be different from pre-process ACTION, except for action NONE.
-  - `TILE`: Tile the point cloud into multiple tiles after done performing all process(es)/status(es). 
-  - `MERGE`: Merge the point cloud tiles into one point cloud after done performing all process(es)/status(es). 
-  - `NONE`: Do nothing to the point cloud (tiles) after done performing all process(es)/status(es).
+  - `TILE`: Tile the point cloud into multiple tiles after performing all process(es)/status(es). 
+  - `MERGE`: Merge the point cloud tiles into one point cloud after performing all process(es)/status(es). 
+  - `NONE`: Do nothing to the point cloud (tiles) after performing all process(es)/status(es).
 
 ### Tiling Option
 #### `-t, --tile=nx,ny,nz`  
-  Set the number of division per axis for TILE action.
+  Set the number of divisions per axis for TILE action.
   - `nx,ny,nz`: Number of divisions along the x, y, and z axes.  
   Example: `2,2,2`.
 
 ### Tiled-input Option
 #### `--tiled-input=NUM`
-  Specified `NUM` point cloud tiles if the input are point cloud tiles.
+  Specify `NUM` point cloud tiles if the input is point cloud tiles.
   - `NUM`: Number of point cloud tiles input (1 for normal input, default is 1).
 
 ---
@@ -126,7 +126,7 @@ Set the post-process action of the program (ACTION can be either TILE, MERGE, or
 ### Process Option
 #### `-p, --process=PROCESS [<ARG>...]`  
   Defines a specific process to be applied to the input point cloud.  
-  - `PROCESS`: An string identifier of the process.  
+  - `PROCESS`: A string identifier of the process.  
   - `<ARG>,...`: Arguments for the process.  
   Example: `--process=sample 0.5 0`, `-p sample 0.5 0`
 
@@ -134,7 +134,7 @@ Set the post-process action of the program (ACTION can be either TILE, MERGE, or
 ##### `sample <ratio> <binary>`
   Sample the processing point cloud given a ratio.
 - `ratio=FLOAT`
-  Specifies the sample ratio compare to the processing point cloud.
+  Specifies the sample ratio compared to the processing point cloud.
 - `binary=0|1`
   Strategy for sampling.
   | Value | Description                 |
@@ -144,20 +144,20 @@ Set the post-process action of the program (ACTION can be either TILE, MERGE, or
 
 #### Voxel process
 ##### `voxel <voxel-size>`
-  Voxel the processing point cloud given the voxel size.
+  Voxelize the processing point cloud given the voxel size.
   - `voxel-size=FLOAT`
-  Specifies the step size to voxel the processing point cloud.
+  Specifies the step size to voxelize the processing point cloud.
 
 #### Remove duplicates process
-##### `remove-dupplicates`
-  Remove dupplicated point in the processing point cloud.
+##### `remove-duplicates`
+  Remove duplicated points in the processing point cloud.
 
 --- 
 
 ### Status Option
 #### `-s, --status=STATUS [<ARG>...]`  
   Calculates the status of the input point cloud based on the given factors.  
-  - `STATUS`: An string identifier of the status calculation method.  
+  - `STATUS`: A string identifier of the status calculation method.  
   - `<ARG>,...`: Arguments for the calculation.  
   Example: `--status=aabb 1 0 bbox%04d.ply`,`-s aabb 1 0 bbox%04d.ply`
 
@@ -179,9 +179,9 @@ Set the post-process action of the program (ACTION can be either TILE, MERGE, or
 
 #### Pixel per Tile
 ##### `pixel-per-tile <camera=JSON> <nx,ny,nz> <output-visibility=JSON>`
-  Calculate the number of pixels each point cloud tile occupies in the camera viewport when view the processing point cloud from a given camera trajectory.
+  Calculate the number of pixels each point cloud tile occupies in the camera viewport when viewing the processing point cloud from a given camera trajectory.
 - `camera=JSON`
-  Specifies the JSON file path of the camera trajectory in MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
+  Specifies the JSON file path of the camera trajectory in the MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
 - `nx,ny,nz`
   Number of divisions along the x, y, and z axes.  
 - `output-visibility=JSON`
@@ -191,22 +191,22 @@ Set the post-process action of the program (ACTION can be either TILE, MERGE, or
 ##### `screen-area-estimation <camera=JSON> <output-estimation=JSON>`
 Estimate the portion of the screen occupied by the processing point cloud, given a specific camera trajectory.
 - `camera=JSON`
-  Specifies the JSON file path of the camera trajectory in MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
+  Specifies the JSON file path of the camera trajectory in the MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
 - `output-estimation=JSON`
   Specifies the output JSON file for each processing point cloud. 
 
 
 #### Save Viewport
 ##### `save-viewport <camera=JSON> <background-color=R,G,B> <output-png(s)=FILE>`
-Calculate the camera viewport when view the processing point cloud given a camera trajectory and the background color.
+Calculate the camera viewport when viewing the processing point cloud, given a camera trajectory and the background color.
 - `camera=JSON`
-  Specifies the JSON file path of the camera trajectory in MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
+  Specifies the JSON file path of the camera trajectory in the MVP matrix. An example JSON can be found [here](assets/cam-matrix.json).
 - `background-color=R,G,B`
   Specifies the background color for the viewport in RGB.
   Example: `255,255,255` for black.
 - `output-png(s)=FILE`
   Specifies the output PNG image(s) for each processing point cloud. 
-  Example: `view%04d.tile%04d.png`, notice the first `%04d` is for viewport index (if the input JSON have multiple MVP matrixes), second `%04d` is for tile index.
+  Example: `view%04d.tile%04d.png`, notice the first `%04d` is for viewport index (if the input JSON has multiple MVP matrixes), second `%04d` is for tile index.
 
 ---
 
@@ -226,16 +226,16 @@ Calculate the camera viewport when view the processing point cloud given a camer
 
 3. **Apply a Processing Step**  
 
-   Sample a point cloud with halves of the points using uniform rule:  
+   Sample a point cloud with half of the points using the uniform rule:  
    ```bash
-   ./bin/pcp -p 0,0.5,0 -i input.ply -o output.ply
+   ./bin/pcp -p sample 0.5 0 -i input.ply -o output.ply
    ```
 
 4. **Tile the Point Cloud**  
 
    Divide the point cloud into 2x2x2 tiles:  
    ```bash
-   ./bin/pcp -i input.ply -o tiles%04d.ply -t 2,2,2
+   ./bin/pcp -i input.ply -o tiles%04d.ply --pre-process=TILE -t 2,2,2
    ```
 
 5. **Combine**
@@ -244,6 +244,7 @@ Calculate the camera viewport when view the processing point cloud given a camer
    ```bash
    ./bin/pcp \
        --process=sample 0.5 0 \
+       --pre-process=TILE \
        --tile=2,2,2 \
        --binary=0 \
        --input=longdress0000.ply \
@@ -251,11 +252,12 @@ Calculate the camera viewport when view the processing point cloud given a camer
    ```
 5. **Sequencing**
 
-   Tile the point cloud and voxel then sample the tiles:
+   Tile the point cloud and voxel, then sample the tiles:
    ```bash
    ./bin/pcp \
        --process=voxel 3 \
        --process=sample 0.5 0 \
+       --pre-process=TILE \
        --tile=2,2,2 \
        --binary=0 \
        --input=longdress0000.ply \
