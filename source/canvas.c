@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 #ifdef HAVE_GPU
-#include <GL/gl.h>
 #include <GL/glew.h>
+#include <GL/gl.h>
 #include <GLFW/glfw3.h>
 
 static const char *default_vert_shader =
