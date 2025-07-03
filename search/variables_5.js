@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['height_391',['height',['../structcanvas__t.html#a009310c1697f32a52ac368e061de2b8d',1,'canvas_t::height()'],['../structpcp__save__viewport__s__arg__t.html#a4c41f666452248f58e7d6236103051db',1,'pcp_save_viewport_s_arg_t::height()'],['../structpcp__pixel__per__tile__s__arg__t.html#a2032570c33d0403e0debd8952b1cccb0',1,'pcp_pixel_per_tile_s_arg_t::height()'],['../structpcp__screen__area__estimation__s__arg__t.html#a0ee042dc51973140ff0790c9ead9fb3e',1,'pcp_screen_area_estimation_s_arg_t::height()']]]
+  ['get_5fmax_413',['get_max',['../structpcp__point__cloud__t.html#aa18581aac5e821d60e91d6d1ef295c3f',1,'pcp_point_cloud_t']]],
+  ['get_5fmin_414',['get_min',['../structpcp__point__cloud__t.html#acbbcbcd7adb59dd7bae94b645b67fbe4',1,'pcp_point_cloud_t']]],
+  ['get_5fpixel_5fper_5ftile_415',['get_pixel_per_tile',['../structpcp__point__cloud__t.html#a25666eec9d99ea2d6c938f70f12a1b2c',1,'pcp_point_cloud_t']]],
+  ['get_5fscreen_5fratio_416',['get_screen_ratio',['../structpcp__mesh__t.html#af6a1d53a067f9dfed23e44f7f8d09442',1,'pcp_mesh_t']]]
 ];

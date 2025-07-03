@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['doc_21',['doc',['../pcp_8c.html#af6164deb8a824f8cb2b9147cfc3174f5',1,'pcp.c']]],
-  ['draw_5fpoints_22',['draw_points',['../structcanvas__t.html#ae29b03cc9b2b7b0160b08397a6e41b45',1,'canvas_t']]]
+  ['defs_2eh_14',['defs.h',['../defs_8h.html',1,'']]],
+  ['doc_15',['doc',['../pcp_8c.html#af6164deb8a824f8cb2b9147cfc3174f5',1,'pcp.c']]],
+  ['draw_5fpoints_16',['draw_points',['../structpcp__canvas__t.html#ab58e561fdd0e3a2b5471d1b2ec82591b',1,'pcp_canvas_t']]]
 ];

@@ -1,0 +1,4 @@
+<map id="pcp_canvas_t" name="pcp_canvas_t">
+<area shape="rect" id="node1" title="holds the data of a virtual screen to be drawn." alt="" coords="5,95,116,121"/>
+<area shape="rect" id="node2" href="$structpcp__vec3uc__t.html" title=" " alt="" coords="5,5,116,32"/>
+</map>

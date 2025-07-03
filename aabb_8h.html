@@ -90,8 +90,8 @@ $(document).ready(function(){initNavTree('aabb_8h.html',''); initResizable(); })
 <div class="title">aabb.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="mesh_8h_source.html">pcprep/mesh.h</a>&quot;</code><br />
-<code>#include &quot;pcprep/pcprep_export.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="defs_8h_source.html">pcprep/defs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mesh_8h_source.html">pcprep/mesh.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vec3f_8h_source.html">pcprep/vec3f.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for aabb.h:</div>
@@ -100,15 +100,18 @@ $(document).ready(function(){initNavTree('aabb_8h.html',''); initResizable(); })
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="aabb_8h__incl.png" border="0" usemap="#aaabb_8h" alt=""/></div>
 <map name="aaabb_8h" id="aaabb_8h">
-<area shape="rect" title=" " alt="" coords="162,5,229,32"/>
-<area shape="rect" href="mesh_8h.html" title=" " alt="" coords="136,155,255,181"/>
-<area shape="rect" title=" " alt="" coords="5,229,180,256"/>
-<area shape="rect" href="vec3f_8h.html" title=" " alt="" coords="275,80,393,107"/>
-<area shape="rect" title=" " alt="" coords="204,229,275,256"/>
-<area shape="rect" title=" " alt="" coords="299,229,369,256"/>
-<area shape="rect" href="core_8h.html" title=" " alt="" coords="279,155,389,181"/>
-<area shape="rect" title=" " alt="" coords="413,155,481,181"/>
-<area shape="rect" title=" " alt="" coords="394,229,453,256"/>
+<area shape="rect" title=" " alt="" coords="397,5,463,32"/>
+<area shape="rect" href="defs_8h.html" title=" " alt="" coords="281,229,392,256"/>
+<area shape="rect" href="mesh_8h.html" title=" " alt="" coords="371,155,489,181"/>
+<area shape="rect" href="vec3f_8h.html" title=" " alt="" coords="510,80,627,107"/>
+<area shape="rect" title=" " alt="" coords="5,304,180,331"/>
+<area shape="rect" title=" " alt="" coords="205,304,279,331"/>
+<area shape="rect" title=" " alt="" coords="395,304,465,331"/>
+<area shape="rect" title=" " alt="" coords="303,304,370,331"/>
+<area shape="rect" title=" " alt="" coords="489,304,560,331"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="513,155,624,181"/>
+<area shape="rect" title=" " alt="" coords="648,155,716,181"/>
+<area shape="rect" title=" " alt="" coords="569,229,627,256"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -128,33 +131,73 @@ $(document).ready(function(){initNavTree('aabb_8h.html',''); initResizable(); })
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaabb__t.html">aabb_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">represent an Axis-Aligned Bounding Box (AABB).  <a href="structaabb__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">represent an Axis-Aligned Bounding Box (AABB).  <a href="structpcp__aabb__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac57663646af0d6aac92a9361f438bba8"><td class="memItemLeft" align="right" valign="top">PCPREP_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aabb_8h.html#ac57663646af0d6aac92a9361f438bba8">aabb_to_mesh</a> (<a class="el" href="structaabb__t.html">aabb_t</a> aabb, <a class="el" href="structmesh__t.html">mesh_t</a> *mesh)</td></tr>
-<tr class="memdesc:ac57663646af0d6aac92a9361f438bba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a triangle mesh from an axis-aligned bounding box.  <a href="aabb_8h.html#ac57663646af0d6aac92a9361f438bba8">More...</a><br /></td></tr>
-<tr class="separator:ac57663646af0d6aac92a9361f438bba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad8fd79ecf5e56d3422884b08ed677a"><td class="memItemLeft" align="right" valign="top">PCPREP_EXPORT <a class="el" href="defs_8h.html#afc96f4a52a39269aac4a42ce9168ed56">pcp_ret_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aabb_8h.html#a4ad8fd79ecf5e56d3422884b08ed677a">pcp_aabb_init</a> (<a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a> *self)</td></tr>
+<tr class="separator:a4ad8fd79ecf5e56d3422884b08ed677a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8396de4d07f4d82dfbcae3854d753fce"><td class="memItemLeft" align="right" valign="top">PCPREP_EXPORT <a class="el" href="defs_8h.html#afc96f4a52a39269aac4a42ce9168ed56">pcp_ret_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aabb_8h.html#a8396de4d07f4d82dfbcae3854d753fce">pcp_aabb_free</a> (<a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a> *self)</td></tr>
+<tr class="separator:a8396de4d07f4d82dfbcae3854d753fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0cc8579ec4b59468bde140ad46edca8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#afc96f4a52a39269aac4a42ce9168ed56">pcp_ret_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aabb_8h.html#ac0cc8579ec4b59468bde140ad46edca8">pcp_aabb_to_mesh</a> (<a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a> *self, <a class="el" href="structpcp__mesh__t.html">pcp_mesh_t</a> *mesh)</td></tr>
+<tr class="memdesc:ac0cc8579ec4b59468bde140ad46edca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a triangle mesh from an axis-aligned bounding box.  <a href="aabb_8h.html#ac0cc8579ec4b59468bde140ad46edca8">More...</a><br /></td></tr>
+<tr class="separator:ac0cc8579ec4b59468bde140ad46edca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac57663646af0d6aac92a9361f438bba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac57663646af0d6aac92a9361f438bba8">&#9670;&nbsp;</a></span>aabb_to_mesh()</h2>
+<a id="a8396de4d07f4d82dfbcae3854d753fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8396de4d07f4d82dfbcae3854d753fce">&#9670;&nbsp;</a></span>pcp_aabb_free()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">PCPREP_EXPORT int aabb_to_mesh </td>
+          <td class="memname">PCPREP_EXPORT <a class="el" href="defs_8h.html#afc96f4a52a39269aac4a42ce9168ed56">pcp_ret_t</a> pcp_aabb_free </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structaabb__t.html">aabb_t</a>&#160;</td>
-          <td class="paramname"><em>aabb</em>, </td>
+          <td class="paramtype"><a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ad8fd79ecf5e56d3422884b08ed677a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad8fd79ecf5e56d3422884b08ed677a">&#9670;&nbsp;</a></span>pcp_aabb_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PCPREP_EXPORT <a class="el" href="defs_8h.html#afc96f4a52a39269aac4a42ce9168ed56">pcp_ret_t</a> pcp_aabb_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0cc8579ec4b59468bde140ad46edca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cc8579ec4b59468bde140ad46edca8">&#9670;&nbsp;</a></span>pcp_aabb_to_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#afc96f4a52a39269aac4a42ce9168ed56">pcp_ret_t</a> pcp_aabb_to_mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpcp__aabb__t.html">pcp_aabb_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structmesh__t.html">mesh_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structpcp__mesh__t.html">pcp_mesh_t</a> *&#160;</td>
           <td class="paramname"><em>mesh</em>&#160;</td>
         </tr>
         <tr>

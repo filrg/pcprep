@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clear_383',['clear',['../structcanvas__t.html#a482798eee3bf42ed7734af0542a5074d',1,'canvas_t']]]
+  ['clear_405',['clear',['../structpcp__canvas__t.html#ad075bb8bba667a7abc46eff57aae5d4d',1,'pcp_canvas_t']]]
 ];

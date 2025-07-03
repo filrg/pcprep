@@ -1,18 +1,9 @@
 var searchData=
 [
-  ['pcp_5fprocess_5flegs_5fcount_5fg_411',['pcp_process_legs_count_g',['../pcp_8h.html#a2970def8b034666aad0b10b82e63f6b3',1,'pcp.h']]],
-  ['pcp_5fprocess_5flegs_5fg_412',['pcp_process_legs_g',['../pcp_8h.html#ae1dac7d26b2789a9599a1234077d1324',1,'pcp.h']]],
-  ['pcp_5fprocess_5fparams_5fg_413',['pcp_process_params_g',['../pcp_8h.html#a57bc57358e48615565d816fb6a67d97b',1,'pcp.h']]],
-  ['pcp_5fstatus_5flegs_5fcount_5fg_414',['pcp_status_legs_count_g',['../pcp_8h.html#a817b73d818d691a1f8cf234acf85ed28',1,'pcp.h']]],
-  ['pcp_5fstatus_5flegs_5fg_415',['pcp_status_legs_g',['../pcp_8h.html#a99cd0447ce41f89d22cf7bda81e9287a',1,'pcp.h']]],
-  ['pcp_5fstatus_5fparams_5fg_416',['pcp_status_params_g',['../pcp_8h.html#a5de1980e688d0518a58e710e3ef9e9d3',1,'pcp.h']]],
-  ['pixels_417',['pixels',['../structcanvas__t.html#acd8271cae2ff3df278bab95377ef23f2',1,'canvas_t']]],
-  ['plan_418',['plan',['../structarguments.html#aa4ba710058b972111c12e5c3f552839a',1,'arguments']]],
-  ['pos_419',['pos',['../structmesh__t.html#a866fef9e62a0b74eefdfb51e5debc47d',1,'mesh_t::pos()'],['../structpointcloud__t.html#aa8eb8624e41d4256fbd3386e62b1582e',1,'pointcloud_t::pos()']]],
-  ['process_5fargp_420',['process_argp',['../pcp_8c.html#a735e6ad860dd8ee79ef6fb64fcfab76a',1,'pcp.c']]],
-  ['process_5fdoc_421',['process_doc',['../pcp_8c.html#a98606e5521ec61544a4870cd7d8904c8',1,'pcp.c']]],
-  ['process_5foptions_422',['process_options',['../pcp_8c.html#a0691c9bd794a8e0f364bf1e9eaff2dbd',1,'pcp.c']]],
-  ['processes_5fg_423',['processes_g',['../pcp_8h.html#a1b84f1c66b1e16e1aa97653815e3f069',1,'pcp.h']]],
-  ['procs_424',['procs',['../structarguments.html#ac700142ac99329363fd178dc771dd769',1,'arguments']]],
-  ['procs_5fsize_425',['procs_size',['../structarguments.html#a75c8c79de824e138b8198d489e433e9a',1,'arguments']]]
+  ['name_428',['name',['../structfunc__info__t.html#af7218bcda0dfc2b54fef608f7911ae76',1,'func_info_t']]],
+  ['num_5findices_429',['num_indices',['../structpcp__mesh__t.html#aef001c555ec564392fe904ccc2f1d095',1,'pcp_mesh_t']]],
+  ['num_5fverts_430',['num_verts',['../structpcp__mesh__t.html#ab1e049a701c2d8e368d33523d6df05e2',1,'pcp_mesh_t']]],
+  ['nx_431',['nx',['../structarguments.html#a616812a73f1d68a5ffcfd29ed42911b6',1,'arguments::nx()'],['../structpcp__pixel__per__tile__s__arg__t.html#a6454c283afa8f7a9044f64b634b067c1',1,'pcp_pixel_per_tile_s_arg_t::nx()']]],
+  ['ny_432',['ny',['../structarguments.html#a7c8b6189a74ca0891a5148651f0a69a3',1,'arguments::ny()'],['../structpcp__pixel__per__tile__s__arg__t.html#a90d66873af38fed4a7507d5d397d1662',1,'pcp_pixel_per_tile_s_arg_t::ny()']]],
+  ['nz_433',['nz',['../structarguments.html#a4301e9512d0709c788e4f04373e1fdbe',1,'arguments::nz()'],['../structpcp__pixel__per__tile__s__arg__t.html#a7ec7f25426358fd2e44616dfcdfaed9c',1,'pcp_pixel_per_tile_s_arg_t::nz()']]]
 ];
