@@ -4,82 +4,88 @@
 extern "C"
 {
 #endif
-#include "pcprep/core.h"
+#include "pcprep/utils.h"
 #include <math.h>
 
-  typedef struct vec3f_t
+  typedef struct pcp_vec3f_t
   {
     float x;
     float y;
     float z;
-  } vec3f_t;
-  static inline vec3f_t vec3f_set(float x, float y, float z)
+  } pcp_vec3f_t;
+  static inline pcp_vec3f_t pcp_vec3f_set(float x, float y, float z)
   {
-    vec3f_t v = {x, y, z};
+    pcp_vec3f_t v = {x, y, z};
     return v;
   }
-  static inline vec3f_t vec3f_int(vec3f_t v)
+  static inline pcp_vec3f_t pcp_vec3f_int(pcp_vec3f_t v)
   {
-    return (vec3f_t){
+    return (pcp_vec3f_t){
         (float)(int)v.x, (float)(int)v.y, (float)(int)v.z};
   }
-  static inline vec3f_t vec3f_mul_scalar(vec3f_t v, float scalar)
+  static inline pcp_vec3f_t pcp_vec3f_mul_scalar(pcp_vec3f_t v,
+                                                 float       scalar)
   {
-    return (vec3f_t){v.x * scalar, v.y * scalar, v.z * scalar};
+    return (pcp_vec3f_t){v.x * scalar, v.y * scalar, v.z * scalar};
   }
-  static inline vec3f_t vec3f_inverse(vec3f_t v)
+  static inline pcp_vec3f_t pcp_vec3f_inverse(pcp_vec3f_t v)
   {
-    return (vec3f_t){1.0f / v.x, 1.0f / v.y, 1.0f / v.z};
+    return (pcp_vec3f_t){1.0f / v.x, 1.0f / v.y, 1.0f / v.z};
   }
-  static inline float vec3f_magnitude(vec3f_t v)
+  static inline float pcp_vec3f_magnitude(pcp_vec3f_t v)
   {
     return (float)sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
   }
-  static inline vec3f_t vec3f_normalize(vec3f_t v)
+  static inline pcp_vec3f_t pcp_vec3f_normalize(pcp_vec3f_t v)
   {
-    float mag = vec3f_magnitude(v);
+    float mag = pcp_vec3f_magnitude(v);
     if (mag > 0.0f)
     {
-      return vec3f_mul_scalar(v, 1.0f / mag);
+      return pcp_vec3f_mul_scalar(v, 1.0f / mag);
     }
-    return vec3f_set(0.0f, 0.0f, 0.0f);
+    return pcp_vec3f_set(0.0f, 0.0f, 0.0f);
   }
-  static inline vec3f_t vec3f_add(vec3f_t a, vec3f_t b)
+  static inline pcp_vec3f_t pcp_vec3f_add(pcp_vec3f_t a,
+                                          pcp_vec3f_t b)
   {
-    return (vec3f_t){a.x + b.x, a.y + b.y, a.z + b.z};
+    return (pcp_vec3f_t){a.x + b.x, a.y + b.y, a.z + b.z};
   }
-  static inline vec3f_t vec3f_sub(vec3f_t a, vec3f_t b)
+  static inline pcp_vec3f_t pcp_vec3f_sub(pcp_vec3f_t a,
+                                          pcp_vec3f_t b)
   {
-    return (vec3f_t){a.x - b.x, a.y - b.y, a.z - b.z};
+    return (pcp_vec3f_t){a.x - b.x, a.y - b.y, a.z - b.z};
   }
-  static inline vec3f_t vec3f_mul(vec3f_t a, vec3f_t b)
+  static inline pcp_vec3f_t pcp_vec3f_mul(pcp_vec3f_t a,
+                                          pcp_vec3f_t b)
   {
-    return (vec3f_t){a.x * b.x, a.y * b.y, a.z * b.z};
+    return (pcp_vec3f_t){a.x * b.x, a.y * b.y, a.z * b.z};
   }
-  static inline float vec3f_dot(vec3f_t a, vec3f_t b)
+  static inline float pcp_vec3f_dot(pcp_vec3f_t a, pcp_vec3f_t b)
   {
     return a.x * b.x + a.y * b.y + a.z * b.z;
   }
-  static inline vec3f_t vec3f_cross(vec3f_t a, vec3f_t b)
+  static inline pcp_vec3f_t pcp_vec3f_cross(pcp_vec3f_t a,
+                                            pcp_vec3f_t b)
   {
-    return (vec3f_t){a.y * b.z - a.z * b.y,
-                     a.z * b.x - a.x * b.z,
-                     a.x * b.y - a.y * b.x};
+    return (pcp_vec3f_t){a.y * b.z - a.z * b.y,
+                         a.z * b.x - a.x * b.z,
+                         a.x * b.y - a.y * b.x};
   }
-  static inline float vec3f_angle_between(vec3f_t a, vec3f_t b)
+  static inline float pcp_vec3f_angle_between(pcp_vec3f_t a,
+                                              pcp_vec3f_t b)
   {
-    float dot  = vec3f_dot(a, b);
-    float magA = vec3f_magnitude(a);
-    float magB = vec3f_magnitude(b);
+    float dot  = pcp_vec3f_dot(a, b);
+    float magA = pcp_vec3f_magnitude(a);
+    float magB = pcp_vec3f_magnitude(b);
     return (float)acos(dot / (magA * magB));
   }
-  static inline int vec3f_eq(vec3f_t a, vec3f_t b)
+  static inline int pcp_vec3f_eq(pcp_vec3f_t a, pcp_vec3f_t b)
   {
     return float_equal(a.x, b.x) && float_equal(a.y, b.y) &&
            float_equal(a.z, b.z);
   }
 
-  static inline int vec3f_g(vec3f_t a, vec3f_t b)
+  static inline int pcp_vec3f_g(pcp_vec3f_t a, pcp_vec3f_t b)
   {
     if (a.x < b.x)
       return 0;
@@ -91,7 +97,7 @@ extern "C"
       return 1;
     return a.z > b.z;
   }
-  static inline int vec3f_l(vec3f_t a, vec3f_t b)
+  static inline int pcp_vec3f_l(pcp_vec3f_t a, pcp_vec3f_t b)
   {
     if (a.x < b.x)
       return 1;
@@ -103,26 +109,28 @@ extern "C"
       return 0;
     return a.z < b.z;
   }
-  static inline int vec3f_geq(vec3f_t a, vec3f_t b)
+  static inline int pcp_vec3f_geq(pcp_vec3f_t a, pcp_vec3f_t b)
   {
-    return vec3f_g(a, b) || vec3f_eq(a, b);
+    return pcp_vec3f_g(a, b) || pcp_vec3f_eq(a, b);
   }
-  static inline int vec3f_leq(vec3f_t a, vec3f_t b)
+  static inline int pcp_vec3f_leq(pcp_vec3f_t a, pcp_vec3f_t b)
   {
-    return vec3f_l(a, b) || vec3f_eq(a, b);
+    return pcp_vec3f_l(a, b) || pcp_vec3f_eq(a, b);
   }
-  static inline vec3f_t vec3f_reflect(vec3f_t v, vec3f_t n)
+  static inline pcp_vec3f_t pcp_vec3f_reflect(pcp_vec3f_t v,
+                                              pcp_vec3f_t n)
   {
-    float dot = vec3f_dot(v, n);
-    return vec3f_sub(v, vec3f_mul_scalar(n, 2 * dot));
+    float dot = pcp_vec3f_dot(v, n);
+    return pcp_vec3f_sub(v, pcp_vec3f_mul_scalar(n, 2 * dot));
   }
 
-  static inline vec3f_t vec3f_quantize(vec3f_t v, float q)
+  static inline pcp_vec3f_t pcp_vec3f_quantize(pcp_vec3f_t v, float q)
   {
-    return (vec3f_t){
+    return (pcp_vec3f_t){
         quantize(v.x, q), quantize(v.y, q), quantize(v.z, q)};
   }
-  static inline vec3f_t vec3f_mvp_mul(vec3f_t v, float *mvp)
+  static inline pcp_vec3f_t pcp_vec3f_mvp_mul(pcp_vec3f_t v,
+                                              float      *mvp)
   {
     float temp_x =
         mvp[0] * v.x + mvp[4] * v.y + mvp[8] * v.z + mvp[12];
@@ -135,10 +143,10 @@ extern "C"
     temp_x /= temp_w;
     temp_y /= temp_w;
     temp_z /= temp_w;
-    return (vec3f_t){temp_x, temp_y, temp_z};
+    return (pcp_vec3f_t){temp_x, temp_y, temp_z};
   }
-  static inline vec3f_t
-  vec3f_rotate(vec3f_t v, float angle, vec3f_t axis)
+  static inline pcp_vec3f_t
+  pcp_vec3f_rotate(pcp_vec3f_t v, float angle, pcp_vec3f_t axis)
   {
     float c           = cosf(angle);
     float s           = sinf(angle);
@@ -164,7 +172,7 @@ extern "C"
          uz * uz * one_minus_c + c     }
     };
 
-    vec3f_t result;
+    pcp_vec3f_t result;
     result.x = R[0][0] * v.x + R[0][1] * v.y + R[0][2] * v.z;
     result.y = R[1][0] * v.x + R[1][1] * v.y + R[1][2] * v.z;
     result.z = R[2][0] * v.x + R[2][1] * v.y + R[2][2] * v.z;

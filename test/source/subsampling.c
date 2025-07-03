@@ -1,4 +1,4 @@
-#include <pcprep/pointcloud.h>
+#include <pcprep/point_cloud.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -48,18 +48,21 @@ int main(int argc, char *argv[])
     return 1;
   }
 
-  pointcloud_t pc           = {0};
-  pointcloud_t sub          = {0};
-  float        NvertPercent = 0;
-  int          subVerts     = 0;
-  int         *index_arr    = NULL;
-  int         *sample       = NULL;
+  pcp_point_cloud_t pc           = {0};
+  pcp_point_cloud_t sub          = {0};
+  float             NvertPercent = 0;
+  int               subVerts     = 0;
+  int              *index_arr    = NULL;
+  int              *sample       = NULL;
 
-  pointcloud_load(&pc, argv[1]);
+  pcp_point_cloud_init(&pc);
+  pcp_point_cloud_init(&sub);
+
+  pc.load(&pc, argv[1]);
   NvertPercent = atof(argv[2]);
   subVerts     = (int)(pc.size * NvertPercent);
 
-  pointcloud_init(&sub, subVerts);
+  sub.alloc(&sub, subVerts);
   index_arr = (int *)malloc(sizeof(int) * pc.size);
   sample    = (int *)malloc(subVerts * sizeof(int));
   srand((unsigned int)time(NULL)); // Seed the random number generator
@@ -77,10 +80,10 @@ int main(int argc, char *argv[])
       sub.rgb[i * 3 + j] = pc.rgb[sample[i] * 3 + j];
     }
   }
-  pointcloud_write(sub, argv[3], 1);
+  sub.write(&sub, argv[3], 1);
 
-  pointcloud_free(&pc);
-  pointcloud_free(&sub);
+  pcp_point_cloud_free(&pc);
+  pcp_point_cloud_free(&sub);
   free(index_arr);
   free(sample);
 }

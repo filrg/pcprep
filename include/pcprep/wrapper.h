@@ -14,9 +14,9 @@ extern "C"
   PCPREP_EXPORT
   int ply_count_face(const char *filename);
   PCPREP_EXPORT
-  int ply_pointcloud_loader(const char    *filename,
-                            float         *pos,
-                            unsigned char *rgb);
+  int ply_pcp_point_cloud_loader(const char    *filename,
+                                 float         *pos,
+                                 unsigned char *rgb);
   PCPREP_EXPORT
   int ply_mesh_loader(const char *filename, float *pos, int *indices);
 

@@ -119,7 +119,7 @@ extern "C"
     return reader.get_element(elemIndex)->count;
   }
   // Wrapper implementation
-  int ply_pointcloud_loader(const char    *filename,
+  int ply_pcp_point_cloud_loader(const char    *filename,
                             float         *pos,
                             unsigned char *rgb)
   {

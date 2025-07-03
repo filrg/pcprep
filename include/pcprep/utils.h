@@ -1,5 +1,5 @@
-#ifndef CORE_H
-#define CORE_H
+#ifndef UTILS_H
+#define UTILS_H
 
 #define PCP_SAMPLE_RULE_UNIFORM 0x00
 #define PCP_FLOAT_ERROR         1e-6f
@@ -8,7 +8,8 @@
 #define HAVE_GPU
 #endif
 
-#include "pcprep/pcprep_export.h"
+#include <pcprep/defs.h>
+
 #include <png.h>
 #include <stdlib.h>
 
@@ -77,5 +78,19 @@ int save_viewport(unsigned char **row_pointers,
                   int             width,
                   int             height,
                   const char     *filename);
+
+// TODO: put this in utils.h
+PCPREP_EXPORT
+int get_tile_id(pcp_vec3f_t n,
+                pcp_vec3f_t min,
+                pcp_vec3f_t max,
+                pcp_vec3f_t v);
+// `pcs` should be passed as an array of pcp_point_cloud_t
+// `output` should be passed as a reference to a pcp_point_cloud_t
+// TODO: put this in utils.h
+PCPREP_EXPORT
+int point_cloud_merge(pcp_point_cloud_t *pcs,
+                      size_t             pc_count,
+                      pcp_point_cloud_t *out);
 
 #endif

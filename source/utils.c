@@ -1,7 +1,9 @@
 #define _POSIX_C_SOURCE 199309L
 #include <cJSON.h>
 #include <math.h>
-#include <pcprep/core.h>
+#include <pcprep/point_cloud.h>
+#include <pcprep/utils.h>
+#include <pcprep/vec3f.h>
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -386,4 +388,54 @@ int save_viewport(unsigned char **row_pointers,
   // Clean up and close the file
   png_destroy_write_struct(&png_ptr, &info_ptr);
   fclose(fp);
+}
+
+int get_tile_id(pcp_vec3f_t n,
+                pcp_vec3f_t min,
+                pcp_vec3f_t max,
+                pcp_vec3f_t v)
+{
+  if (v.x > max.x || v.y > max.y || v.z > max.z || v.x < min.x ||
+      v.y < min.y || v.z < min.z)
+    return -1;
+  pcp_vec3f_t ans;
+  // ans = (v - min) / ((max - min) / n);
+  // or ans = (v - min) * (invs(max - min) / n);
+  // or ans = (v - min) * (invs(max - min) * invs(n));
+  // or ans = (v - min) * invs(max - min) * n);
+  ans = pcp_vec3f_mul(
+      pcp_vec3f_mul(pcp_vec3f_sub(v, min),
+                    pcp_vec3f_inverse(pcp_vec3f_sub(max, min))),
+      n);
+  ans = (pcp_vec3f_t){(int)(ans.x < n.x ? ans.x : n.x - 1),
+                      (int)(ans.y < n.y ? ans.y : n.y - 1),
+                      (int)(ans.z < n.z ? ans.z : n.z - 1)};
+
+  return ans.z + ans.y * n.z + ans.x * n.y * n.z;
+}
+
+int point_cloud_merge(pcp_point_cloud_t *pcs,
+                      size_t             pc_count,
+                      pcp_point_cloud_t *out)
+{
+  size_t total_size = 0;
+  for (int i = 0; i < pc_count; i++)
+    total_size += pcs[i].size;
+  if (out->alloc(out, total_size) == PCPREP_RET_FAIL)
+  {
+    return -1; // Memory allocation failed
+  }
+
+  int curr = 0;
+  for (int i = 0; i < pc_count; i++)
+  {
+    memcpy((char *)(out->pos + curr * 3),
+           (char *)pcs[i].pos,
+           pcs[i].size * 3 * sizeof(float));
+    memcpy((char *)(out->rgb + curr * 3),
+           (char *)pcs[i].rgb,
+           pcs[i].size * 3 * sizeof(uint8_t));
+    curr += pcs[i].size;
+  }
+  return 1;
 }

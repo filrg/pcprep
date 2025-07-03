@@ -1,8 +1,8 @@
 #include "pcp.h"
 #include <argp.h>
 #include <assert.h>
-#include <pcprep/core.h>
-#include <pcprep/pointcloud.h>
+#include <pcprep/point_cloud.h>
+#include <pcprep/utils.h>
 #include <pcprep/wrapper.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -11,40 +11,42 @@
 
 int pcp_prepare(struct arguments *arg)
 {
-  pointcloud_t *in_pcs           = NULL;
-  pointcloud_t *proc_pcs         = NULL;
-  pointcloud_t *out_pcs          = NULL;
-  char         *input_path       = NULL;
-  char         *output_path      = NULL;
-  char         *output_tile_path = NULL;
-  char         *input_tile_path  = NULL;
-  int           max_path_size    = 0;
-  int           binary           = 0;
-  int           proc_count       = 0;
-  int           in_count         = 0;
-  int           out_count        = 0;
-  long long     read_time        = 0;
-  long long     pre_proc_time    = 0;
-  long long     proc_time        = 0;
-  long long     post_proc_time   = 0;
-  long long     write_time       = 0;
-  long long     curr_time        = 0;
+  pcp_point_cloud_t *in_pcs           = NULL;
+  pcp_point_cloud_t *proc_pcs         = NULL;
+  pcp_point_cloud_t *out_pcs          = NULL;
+  char              *input_path       = NULL;
+  char              *output_path      = NULL;
+  char              *output_tile_path = NULL;
+  char              *input_tile_path  = NULL;
+  int                max_path_size    = 0;
+  int                binary           = 0;
+  int                proc_count       = 0;
+  int                in_count         = 0;
+  int                out_count        = 0;
+  long long          read_time        = 0;
+  long long          pre_proc_time    = 0;
+  long long          proc_time        = 0;
+  long long          post_proc_time   = 0;
+  long long          write_time       = 0;
+  long long          curr_time        = 0;
 
-  max_path_size                  = SIZE_PATH;
-  input_path                     = arg->input;
-  output_path                    = arg->output;
-  binary                         = arg->binary;
+  max_path_size                       = SIZE_PATH;
+  input_path                          = arg->input;
+  output_path                         = arg->output;
+  binary                              = arg->binary;
   input_tile_path  = (char *)malloc(max_path_size * sizeof(char));
   output_tile_path = (char *)malloc(max_path_size * sizeof(char));
   in_count         = arg->tiled_input;
 
   curr_time        = get_current_time_ms();
 
-  in_pcs = (pointcloud_t *)calloc(in_count, sizeof(pointcloud_t));
+  in_pcs           = (pcp_point_cloud_t *)calloc(in_count,
+                                       sizeof(pcp_point_cloud_t));
   for (int t = 0; t < in_count; t++)
   {
+    pcp_point_cloud_init(&in_pcs[t]);
     snprintf(input_tile_path, max_path_size, input_path, t);
-    pointcloud_load(&in_pcs[t], input_tile_path);
+    in_pcs[t].load(&in_pcs[t], input_tile_path);
   }
   read_time = get_current_time_ms() - curr_time;
   curr_time = get_current_time_ms();
@@ -57,17 +59,19 @@ int pcp_prepare(struct arguments *arg)
     nx         = arg->tile.nx;
     ny         = arg->tile.ny;
     nz         = arg->tile.nz;
-    proc_count = pointcloud_tile(in_pcs[0], nx, ny, nz, &proc_pcs);
+    proc_count = nx * ny * nz;
+    in_pcs[0].tile(&in_pcs[0], nx, ny, nz, &proc_pcs);
     for (int i = 0; i < in_count; i++)
-      pointcloud_free(&in_pcs[i]);
+      pcp_point_cloud_free(&in_pcs[i]);
     free(in_pcs);
   }
   else if (in_count > 1 && arg->plan & PCP_PLAN_MERGE_NONE)
   {
-    proc_pcs   = (pointcloud_t *)malloc(sizeof(pointcloud_t));
-    proc_count = pointcloud_merge(in_pcs, in_count, &proc_pcs[0]);
+    proc_pcs = (pcp_point_cloud_t *)malloc(sizeof(pcp_point_cloud_t));
+    pcp_point_cloud_init(proc_pcs);
+    proc_count = point_cloud_merge(in_pcs, in_count, &proc_pcs[0]);
     for (int i = 0; i < in_count; i++)
-      pointcloud_free(&in_pcs[i]);
+      pcp_point_cloud_free(&in_pcs[i]);
     free(in_pcs);
   }
   else
@@ -197,7 +201,7 @@ int pcp_prepare(struct arguments *arg)
             .height     = 0,
             .width      = 0,
             .mvp_count  = 0,
-            .background = (vec3uc_t){255, 255, 255}
+            .background = (pcp_vec3uc_t){255, 255, 255}
         };
         param->mvp_count =
             json_parse_cam_matrix(curr->func_arg[0],
@@ -241,10 +245,11 @@ int pcp_prepare(struct arguments *arg)
 
   if (arg->plan & PCP_PLAN_NONE_MERGE)
   {
-    out_pcs   = (pointcloud_t *)malloc(sizeof(pointcloud_t));
-    out_count = pointcloud_merge(proc_pcs, proc_count, &out_pcs[0]);
+    out_pcs = (pcp_point_cloud_t *)malloc(sizeof(pcp_point_cloud_t));
+    pcp_point_cloud_init(out_pcs);
+    out_count = point_cloud_merge(proc_pcs, proc_count, &out_pcs[0]);
     for (int i = 0; i < proc_count; i++)
-      pointcloud_free(&proc_pcs[i]);
+      pcp_point_cloud_free(&proc_pcs[i]);
     free(proc_pcs);
   }
   else if (arg->plan & PCP_PLAN_NONE_TILE)
@@ -255,9 +260,10 @@ int pcp_prepare(struct arguments *arg)
     nx        = arg->tile.nx;
     ny        = arg->tile.ny;
     nz        = arg->tile.nz;
-    out_count = pointcloud_tile(proc_pcs[0], nx, ny, nz, &out_pcs);
+    out_count = nx * ny * nz;
+    proc_pcs[0].tile(&proc_pcs[0], nx, ny, nz, &out_pcs);
     for (int i = 0; i < proc_count; i++)
-      pointcloud_free(&proc_pcs[i]);
+      pcp_point_cloud_free(&proc_pcs[i]);
     free(proc_pcs);
   }
   else
@@ -279,7 +285,7 @@ int pcp_prepare(struct arguments *arg)
       printf("Tile %d have no points, skip writing...\n", t);
     }
     snprintf(output_tile_path, max_path_size, output_path, t);
-    pointcloud_write(out_pcs[t], output_tile_path, binary);
+    out_pcs[t].write(&out_pcs[t], output_tile_path, binary);
   }
 
   write_time = get_current_time_ms() - curr_time;
@@ -294,7 +300,7 @@ int pcp_prepare(struct arguments *arg)
          write_time);
 
   for (int i = 0; i < out_count; i++)
-    pointcloud_free(&out_pcs[i]);
+    pcp_point_cloud_free(&out_pcs[i]);
   free(out_pcs);
 
   free(input_tile_path);

@@ -1,10 +1,10 @@
-#include <pcprep/pointcloud.h>
+#include <pcprep/point_cloud.h>
 #include <glm/gtc/matrix_transform.hpp>
 #include <cJSON.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <pcprep/core.h>
+#include <pcprep/utils.h>
 
 
 int parse_aspect_ratio(const char* aspect_str, int *width, int *height) 
