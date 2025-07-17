@@ -111,7 +111,7 @@ if(PROJECT_IS_TOP_LEVEL)
         ExternalProject_Add(
              vpcc
              GIT_REPOSITORY https://github.com/MPEGGroup/mpeg-pcc-tmc2.git
-             GIT_TAG master
+             GIT_TAG release-v25.0
              CMAKE_ARGS
              -DCMAKE_INSTALL_PREFIX=${PROJECT_SOURCE_DIR}/external/vpcc
              )
