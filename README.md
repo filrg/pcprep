@@ -1,4 +1,4 @@
-# A point cloud preparation tool
+# A point cloud preparation tool ![CI](../../actions/workflows/ci.yml/badge.svg)
 
 This is the pcprep project.
 
