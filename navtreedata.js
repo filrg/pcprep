@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "libpcprep", "index.html", [
-    [ "A point cloud preparation tool", "index.html", [
+    [ "A point cloud preparation tool <img src=\"../../actions/workflows/ci.yml/badge.svg\" alt=\"CI\"/>", "index.html", [
       [ "Building and installing", "index.html#autotoc_md1", null ],
       [ "Documentation", "index.html#autotoc_md2", null ],
       [ "Point Cloud Prepare (pcp)", "index.html#autotoc_md3", null ],

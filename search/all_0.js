@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_20point_20cloud_20preparation_20tool_0',['A point cloud preparation tool',['../index.html',1,'']]],
+  ['a_20point_20cloud_20preparation_20tool_20_3cimg_20src_3d_22_2e_2e_2f_2e_2e_2factions_2fworkflows_2fci_2eyml_2fbadge_2esvg_22_20alt_3d_22ci_22_2f_3e_0',['A point cloud preparation tool &lt;img src=&quot;../../actions/workflows/ci.yml/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../index.html',1,'']]],
   ['aabb_2eh_1',['aabb.h',['../aabb_8h.html',1,'']]],
   ['alloc_2',['alloc',['../structpcp__mesh__t.html#af3c9ce6b023d379e099579f59fdf9a7f',1,'pcp_mesh_t::alloc()'],['../structpcp__point__cloud__t.html#a2d0d68a9ab6d2154a3f09bcd1ae0216a',1,'pcp_point_cloud_t::alloc()']]],
   ['argp_3',['argp',['../pcp_8c.html#ab70c96531b1b652d70c221cfaf3207f3',1,'pcp.c']]],
